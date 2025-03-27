@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-card">
+      <img src="https://visitkland.com/assets/images/logo.png" alt="Logo" class="logo" />
+      <h3>ENTER YOUR EMAIL TO CONTINUE</h3>
+  
+      <!-- Angular FormGroup -->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <input type="email" formControlName="email" placeholder="Email" required />
+        </div>
+        <div class="input-group password-group">
+          <input type="password" formControlName="password" placeholder="Password" required />
+          <span class="toggle-password" (click)="togglePassword()">👁️</span>
+        </div>
+        <div class="forgot-password">
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="login-btn" [disabled]="loginForm.invalid">Login</button>
+        <p class="signup-text">Don't have an account? <a href="#">Create Account</a></p>
+      </form>
+    </div>
+  </div>
+  

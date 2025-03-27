@@ -1,0 +1,155 @@
+<div class="top-banner">
+  <div class="logo">
+      <img src="https://visitkland.com/assets/images/logo.png" alt="KLand Logo">
+  </div>
+  
+  <div class="language-menu">
+      <span>العربية</span>  
+      <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div> 
+  </div> 
+</div>
+
+<div class="account-header">
+  <h1>MY ACCOUNT</h1>
+  <p>Manage Your Fun: View Tickets, Book Zones, and Track Your Adventure!</p>
+</div>
+ <div class="dashboard-container">
+   
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- User Header Section -->
+      <div class="user-header">
+        <div class="profile-info">
+          <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/452/external-user-interface-kiranshastry-solid-kiranshastry-1.png" alt="User Profile" class="profile-pic">
+          <div>
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p>{{ user.phone_code }} {{ user.phone }}</p>
+            <p>{{ user.email }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="may">
+        <div class="sidebar-card">
+          <ul>
+            <li><i class="fa fa-user"></i> <a href="#">Edit Profile</a></li>
+            <li><i class="fa fa-question-circle"></i> <a href="#">FAQs</a></li>
+            <li><i class="fa fa-phone"></i> <a href="#">Contact Us</a></li>
+            <li><i class="fa fa-trash"></i> <a href="#">Delete Account</a></li>
+            <li class="logout"><i class="fa fa-sign-out-alt"></i> <button (click)="logout()">Logout</button></li>
+            
+          </ul>
+      </div>
+      
+          <!-- Personal Information -->
+          <div class="personal-info">
+            <h2>Personal Information</h2>
+            <div class="user-header">
+              <div class="profile-info">
+                <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/452/external-user-interface-kiranshastry-solid-kiranshastry-1.png" alt="User Profile" class="profile-pic">
+                <div>
+                  <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+                
+                  <p>{{ user.email }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="info-container">
+              <div class="input-group">
+                <label>First Name</label>
+                <input type="text" [(ngModel)]="user.first_name">
+              </div>
+              <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" [(ngModel)]="user.last_name">
+              </div>
+              <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" [(ngModel)]="user.email" disabled>
+              </div>
+              <div class="input-group phone-group">
+                <label>Phone Number</label> 
+                <div class="phone-input-container">
+                  <select [(ngModel)]="user.phone_code">
+                    <option value="+91" >+91</option>
+                    <option value="+965">+965</option>
+                  </select>
+                  |
+                  <input type="text" [(ngModel)]="user.phone" placeholder="Enter phone number">
+                </div>
+              </div>
+              
+              
+              <!-- Password Fields -->
+              <div class="input-group">
+                <label>Old Password</label>
+                <div class="password-wrapper">
+                  <input [type]="showOldPassword ? 'text' : 'password'" placeholder="Enter current password">
+                  <span (click)="togglePassword('old')">{{ showOldPassword ? '/👁️' : '👁️' }}</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>New Password</label>
+                <div class="password-wrapper">
+                  <input [type]="showNewPassword ? 'text' : 'password'" placeholder="Enter new password">
+                  <span (click)="togglePassword('new')">{{ showNewPassword ? '/👁️' : '👁️' }}</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>Confirm New Password</label>
+                <div class="password-wrapper">
+                  <input [type]="showConfirmPassword ? 'text' : 'password'" placeholder="Confirm new password">
+                  <span (click)="togglePassword('confirm')">{{ showConfirmPassword ? '/👁️' : '👁️' }}</span>
+                </div>
+              </div>
+      <br>
+    
+               
+            </div>
+            <button class="save-btn">Save</button>
+          </div>
+      </div>
+      
+    </div>
+  </div>  
+  <!--- Footer Section -->
+  <div class="footer">
+    <div class="footer-container">
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Join the Team</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <hr> <!-- Divider-->
+  
+    <div class="footer-bottom">
+
+        <div class="privacy-policy">
+            <p>Privacy Policy</p>
+            <p>Copyright © 2024 K-Land. All Rights Reserved.</p>
+        </div>
+        <div class="follow-us">
+            <p>Follow Us</p>
+           <br>
+            <div class="social-icon">
+                <img src="https://visitkland.com/assets/icons/insta-icon.svg "alt="KLand Logo">
+            </div>
+        </div> 
+         
+        <div class="presented-by">
+            <p>Presented by</p>
+            <img src="https://visitkland.com/assets/images/logo.png"alt="KLand Logo">
+        </div>
+    </div>

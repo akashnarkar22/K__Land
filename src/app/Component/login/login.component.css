@@ -1,0 +1,95 @@
+ 
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://visitkland.com/assets/images/login-background.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* login card */
+.login-card {
+    position: relative;
+    z-index: 10; 
+    background: white;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Move Toastr   */
+.toast-container {
+    position: absolute !important;
+    bottom: 10px;
+    z-index: 5 !important;  
+}
+
+/* Logo */
+.logo {
+    width: 150px; 
+    margin-bottom: 10px;
+    margin-left: 30%;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width:95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Password Group */
+.password-group {
+    position: relative;
+}
+
+.password-group .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Signup Text */
+.signup-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
